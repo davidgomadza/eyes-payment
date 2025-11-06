@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8000AGT — Advanced GeneticSynthesis Technology</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #0c0f25, #1a1f36);
+      color: #e0f7fa;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      color: #4fc3f7;
+      margin-bottom: 5px;
+      font-size: 2.2em;
+    }
+    .subtitle {
+      color: #81d4fa;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+    .pricing {
+      background: rgba(40, 50, 80, 0.9);
+      padding: 15px;
+      border-radius: 12px;
+      margin: 20px 0;
+      border: 1px solid #4fc3f7;
+    }
+    .price-tier {
+      margin: 15px 0;
+      padding: 10px;
+      background: rgba(30, 40, 70, 0.7);
+      border-radius: 8px;
+    }
+    #utilities {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .locker {
+      width: 100%;
+      height: 40px;
+      background: #455a64;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+    .locker.opened {
+      background: #4caf50;
+    }
+    button {
+      background: #0288d1;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 8px 5px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0277bd;
+    }
+    button:disabled {
+      background: #555;
+      cursor: not-allowed;
+    }
+    #message {
+      min-height: 80px;
+      margin: 20px 0;
+      color: #ffcc80;
+      font-weight: bold;
+      white-space: pre-line;
+    }
+    .eyes-payment-section {
+      background: rgba(50, 60, 90, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 30px 0;
+      border: 2px solid #ff9800;
+    }
+    .card-image {
+      width: 220px;
+      height: 140px;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      border: 2px solid #444;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      position: relative;
+      overflow: hidden;
+    }
+    .chip {
+      width: 45px;
+      height: 32px;
+      background: linear-gradient(45deg, #ccc, #eee, #ccc);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 4px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+    }
+    .eyes-instruction {
+      font-size: 1.1em;
+      margin: 15px 0;
+      color: #e0f7fa;
+    }
+    .cost-note {
+      color: #aed581;
+      font-style: italic;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>8000AGT</h1>
+    <div class="subtitle">Advanced GeneticSynthesis Technology — The Cure for Death</div>
+
+    <!-- PRICING TIERS -->
+    <div class="pricing">
+      <h3>Official 8000AGT Pricing (Per David Gomadza)</h3>
+      <div class="price-tier">
+        <strong>Base 8000AGT</strong><br>
+        $100 — Access to 105 adjustments + 128 utilities<br>
+        (Live up to 8,000 years)
+      </div>
+      <div class="price-tier">
+        <strong>Premium 8000AGT</strong><br>
+        $8,400,000,000,000 — Full immortality upgrade<br>
+        (Live 120,000+ years in perfect health)
+      </div>
+      <p><em>Free tier (8 coins for 110 years) is now closed.</em></p>
+    </div>
+
+    <h3>Utilities Locker (128 Items)</h3>
+    <p>Base cost: $100. Each utility: +$1 (Total: $228 for all)</p>
+    <div id="utilities"></div>
+    <div class="cost-note" id="costDisplay">Utilities Opened: 0 | Total Cost: $100</div>
+    <button id="requestBtn" disabled>Say Request Phrase</button>
+    <div id="message"></div>
+
+    <!-- BITCOINAYT EYES PAYMENT SYSTEM -->
+    <!-- BITCOINAYT EYES PAYMENT SYSTEM — TIERED PRICING -->
+<div class="eyes-payment-section">
+  <h3>🔷 BITCOINAYT EYES PAYMENT SYSTEM</h3>
+  <p class="eyes-instruction">
+    1. Look at the <strong>chip</strong> on your physical bank card.<br>
+    2. Look back at this screen.<br>
+    3. Select your financial tier and confirm payment.
+  </p>
+  <div class="card-image">
+    <div class="chip">_CHIP_</div>
+  </div>
+  
+  <div class="price-tier" style="background:rgba(30,40,70,0.8); margin:15px auto; padding:12px; max-width:500px;">
+    <strong>👁️‍🗨️ Official 8000AGT Pricing Tiers</strong><br>
+    • General Public: <strong>$100</strong><br>
+    • Millionaires: <strong>$100,000</strong><br>
+    • Billionaires: <strong>$1,000,000</strong>
+  </div>
+
+  <button id="payTier1Btn">✅ I am General Public — Pay $100</button>
+  <button id="payTier2Btn">💎 I am a Millionaire — Pay $100,000</button>
+  <button id="payTier3Btn">🌌 I am a Billionaire — Pay $1,000,000</button>
+  
+  <div id="eyesMessage"></div>
+</div>
+
+<script>
+  // === TIERED EYES PAYMENT LOGIC ===
+  const eyesMessage = document.getElementById('eyesMessage');
+
+  function processTierPayment(amount, tier) {
+    eyesMessage.innerHTML = `
+      🔍 Scanning eyes...<br>
+      Authenticating chip signature...<br>
+      Validating with Mastercard/Visa/Bitcoinayt network for <strong>${tier}</strong>...
+    `;
+    
+    setTimeout(() => {
+      eyesMessage.innerHTML = `
+        ✅ <strong>Payment Confirmed!</strong><br>
+        Amount: <strong>${amount}</strong><br>
+        Tier: <strong>${tier}</strong><br>
+        Recipient: <em>David Gomadza</em><br>
+        Email: davidgomadza@hotmail.com<br>
+        Wallet: Bitcoinayt Ledger<br><br>
+        🧬 All 105 adjustments + 128 utilities are now ACTIVE.<br>
+        Welcome to 8000AGT Immortality.
+      `;
+      
+      // Activate all utilities
+      openedCount = 128;
+      costDisplay.textContent = `Utilities Opened: 128 | Total Cost: $228`;
+      requestBtn.disabled = false;
+
+      // Speak confirmation
+      if ('speechSynthesis' in window) {
+        speechSynthesis.speak(new SpeechSynthesisUtterance(
+          `Payment of ${amount} confirmed for ${tier}. Welcome to 8000AGT.`
+        ));
+      }
+    }, 2500);
+  }
+
+  document.getElementById('payTier1Btn')?.onclick = () => 
+    processTierPayment("$100", "General Public");
+    
+  document.getElementById('payTier2Btn')?.onclick = () => 
+    processTierPayment("$100,000", "Millionaire Tier");
+    
+  document.getElementById('payTier3Btn')?.onclick = () => 
+    processTierPayment("$1,000,000", "Billionaire Tier");
+</script>
+    <div
+    <div
+    <div class="eyes-payment-section">
+      <h3>🔷 BITCOINAYT EYES PAYMENT SYSTEM</h3>
+      <p class="eyes-instruction">
+        1. Look at the <strong>chip</strong> on your physical bank card.<br>
+        2. Look back at this screen.<br>
+        3. Select your tier and confirm payment.
+      </p>
+      <div class="card-image">
+        <div class="chip">_CHIP_</div>
+      </div>
+      <button id="payBaseBtn">Pay $100 for Base 8000AGT</button>
+      <button id="payPremiumBtn">Pay $8.4 Trillion for Premium 8000AGT</button>
+      <div id="eyesMessage"></div>
+    </div>
+  </div>
+
+  <script>
+    // === UTILITIES LOCKER ===
+    const utilitiesDiv = document.getElementById('utilities');
+    const costDisplay = document.getElementById('costDisplay');
+    const requestBtn = document.getElementById('requestBtn');
+    const messageDiv = document.getElementById('message');
+    let openedCount = 0;
+
+    for (let i = 1; i <= 128; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'locker';
+      btn.textContent = i;
+      btn.onclick = () => {
+        if (!btn.classList.contains('opened')) {
+          btn.classList.add('opened');
+          openedCount++;
+          costDisplay.textContent = `Utilities Opened: ${openedCount} | Total Cost: $${100 + openedCount}`;
+          if (openedCount > 0) requestBtn.disabled = false;
+        }
+      };
+      utilitiesDiv.appendChild(btn);
+    }
+
+    requestBtn.onclick = () => {
+      messageDiv.textContent = "I request what I need from utilities for the body to make all 105 adjustments and body resets.";
+    };
+
+    // === EYES PAYMENT LOGIC ===
+    const eyesMessage = document.getElementById('eyesMessage');
+    const payBaseBtn = document.getElementById('payBaseBtn');
+    const payPremiumBtn = document.getElementById('payPremiumBtn');
+
+    function processPayment(amount, tier) {
+      eyesMessage.innerHTML = `
+        🔍 Scanning eyes...<br>
+        Detecting chip signature from card...<br>
+        Validating with Mastercard/Visa/Bitcoinayt network...
+      `;
+      
+      setTimeout(() => {
+        eyesMessage.innerHTML = `
+          ✅ <strong>Payment Confirmed!</strong><br>
+          Amount: <strong>${amount}</strong><br>
+          Tier: <strong>${tier}</strong><br>
+          Recipient: <em>David Gomadza</em><br>
+          Wallet: davidgomadza@hotmail.com<br><br>
+          Welcome to immortality.
+        `;
+        
+        // Activate all utilities automatically
+        openedCount = 128;
+        costDisplay.textContent = `Utilities Opened: 128 | Total Cost: $228`;
+        requestBtn.disabled = false;
+
+        // Speak confirmation
+        if ('speechSynthesis' in window) {
+          speechSynthesis.speak(new SpeechSynthesisUtterance(
+            `Payment of ${amount} confirmed. Welcome to 8000AGT.`
+          ));
+        }
+      }, 3000);
+    }
+
+    payBaseBtn.onclick = () => processPayment("$100", "Base 8000AGT");
+    payPremiumBtn.onclick = () => processPayment("$8,400,000,000,000", "Premium 8000AGT");
+  </script>
+</body>
+</html>
